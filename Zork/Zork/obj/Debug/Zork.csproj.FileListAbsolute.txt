@@ -6,3 +6,11 @@ C:\Users\an097285\source\repos\Zork\Zork\obj\Debug\Zork.csproj.CoreCompileInputs
 C:\Users\an097285\source\repos\Zork\Zork\obj\Debug\Zork.exe
 C:\Users\an097285\source\repos\Zork\Zork\obj\Debug\Zork.pdb
 C:\Users\an097285\source\repos\Zork\Zork\obj\Debug\Zork.exe.config
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\bin\Debug\Zork.exe.config
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\bin\Debug\Zork.exe
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\bin\Debug\Zork.pdb
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.csproj.AssemblyReference.cache
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.exe.config
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.csproj.CoreCompileInputs.cache
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.exe
+C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.pdb

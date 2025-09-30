@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,39 +18,91 @@ namespace Zork
         UNKNOWN
     }
 
+    
+
     class Program
     {
+        private static readonly string[] Rooms = 
+            {
+                "Forest", "West of House", "Behind House", "Clearing", "Canyon View"
+            };
+
+        static int location;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Zork!");
+            location = 1;
 
-            string inputString = Console.ReadLine();
-            Commands command = ToCommand(inputString.Trim().ToUpper());
-            Console.WriteLine(command);
+
+            Console.WriteLine("Welcome to Zork!");
+            
+
+            Commands command = Commands.UNKNOWN;
+            while (command != Commands.QUIT)
+            {
+                Console.WriteLine(Rooms[location]);
+                Console.WriteLine("> ");
+                command = ToCommand(Console.ReadLine().Trim());
+
+                string outputString;
+                switch (command)
+                {
+                    
+
+                    case Commands.QUIT:
+                        outputString = "Thank you for playing!";
+                        break;
+                    
+                    case Commands.LOOK:
+                        outputString = "This is an open field west of a white house, with a boarded front door.\nA rubber mat saying 'Welcome to Zork!' lies by the door.";
+                        break;
+
+                    //case Commands.NORTH:
+                    //case Commands.SOUTH:
+                    case Commands.WEST:
+                    case Commands.EAST:
+                        if (Move(command))
+                            outputString = $"You moved {command}.";
+                        else
+                            outputString = "The way is shut!";
+                        break;
+
+                            default:
+                        outputString = "Unknown command.";
+                        break;
+                }
+
+
+                Console.WriteLine(outputString);
+            }
+            
 
             
         }
 
+
         private static Commands ToCommand(string commandString)
         {
-            Commands command;
+            return Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN; 
+        }
 
-            if (commandString == "QUIT")
-                command = Commands.QUIT;
-            else if (commandString == "LOOK")
-                command = Commands.LOOK;
-            else if (commandString == "NORTH")
-                command = Commands.NORTH;
-            else if (commandString == "SOUTH")
-                command = Commands.SOUTH;
-            else if (commandString == "EAST")
-                command = Commands.EAST;
-            else if (commandString == "WEST")
-                command = Commands.WEST;
-            else
-                command = Commands.UNKNOWN;
+        private static bool Move(Commands direction)
+        {
+            if (direction == Commands.WEST)
+            {
+                if (location == 0) return false;
+                location--;
+                return true;
+            }
 
-            return command;
+            if (direction == Commands.EAST)
+            {
+                if (location == Rooms.Length - 1) return false;
+                location++;
+                return true;
+            }
+
+            return false;
         }
     }
 }
