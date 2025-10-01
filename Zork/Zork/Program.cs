@@ -22,16 +22,20 @@ namespace Zork
 
     class Program
     {
-        private static readonly string[] Rooms = 
+        private static readonly string[,] Rooms = 
             {
-                "Forest", "West of House", "Behind House", "Clearing", "Canyon View"
+                { "Rocky Trail", "South of House", "Canyon View"},
+                {"Forest", "West of House", "Behind House" },
+                {"Dense Woods", "North of House", "Clearing" }
             };
 
-        static int location;
+        static int horizontal;
+        static int vertical;
 
         static void Main(string[] args)
         {
-            location = 1;
+            horizontal = 1;
+            vertical = 1;
 
 
             Console.WriteLine("Welcome to Zork!");
@@ -40,7 +44,7 @@ namespace Zork
             Commands command = Commands.UNKNOWN;
             while (command != Commands.QUIT)
             {
-                Console.WriteLine(Rooms[location]);
+                Console.WriteLine(Rooms[vertical, horizontal]);
                 Console.WriteLine("> ");
                 command = ToCommand(Console.ReadLine().Trim());
 
@@ -57,8 +61,8 @@ namespace Zork
                         outputString = "This is an open field west of a white house, with a boarded front door.\nA rubber mat saying 'Welcome to Zork!' lies by the door.";
                         break;
 
-                    //case Commands.NORTH:
-                    //case Commands.SOUTH:
+                    case Commands.NORTH:
+                    case Commands.SOUTH:
                     case Commands.WEST:
                     case Commands.EAST:
                         if (Move(command))
@@ -90,15 +94,29 @@ namespace Zork
         {
             if (direction == Commands.WEST)
             {
-                if (location == 0) return false;
-                location--;
+                if (horizontal == 0) return false;
+                horizontal--;
                 return true;
             }
 
             if (direction == Commands.EAST)
             {
-                if (location == Rooms.Length - 1) return false;
-                location++;
+                if (horizontal == Rooms.GetLength(0) - 1) return false;
+                horizontal++;
+                return true;
+            }
+
+            if (direction == Commands.SOUTH)
+            {
+                if (vertical == Rooms.GetLength(1) - 1) return false;
+                vertical++;
+                return true;
+            }
+
+            if (direction == Commands.NORTH)
+            {
+                if (vertical == 0) return false;
+                vertical--;
                 return true;
             }
 

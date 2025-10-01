@@ -14,3 +14,11 @@ C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.exe.config
 C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.csproj.CoreCompileInputs.cache
 C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.exe
 C:\Users\an097285\Documents\GitHub\zorklab\Zork\Zork\obj\Debug\Zork.pdb
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\bin\Debug\Zork.exe.config
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\bin\Debug\Zork.exe
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\bin\Debug\Zork.pdb
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\obj\Debug\Zork.csproj.AssemblyReference.cache
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\obj\Debug\Zork.exe.config
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\obj\Debug\Zork.csproj.CoreCompileInputs.cache
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\obj\Debug\Zork.exe
+D:\Users\tonyr\Documents\Git Repos\zorklab\Zork\Zork\obj\Debug\Zork.pdb
